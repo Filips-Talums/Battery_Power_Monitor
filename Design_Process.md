@@ -157,7 +157,18 @@ If required, the shunt resistor can be replaced using soldering equipment to bet
 
 ### 5.3 OLED Display
 
+A 0.96 inch 128x64 I2C OLED display was chosen to show the live voltage, current, and power readings. The display only requires four connections: VCC, GND, SDA, and SCL, making it simple to connect to the ESP32.
+
+The 128x64 resolution provides enough space to display all key readings at the same time, allowing the user to quickly check the power source and load behaviour during testing.
+
 ### 5.4 Buck Converter
+
+The input voltage for the project is expected to vary between 5 V and 12 V. As the ESP32 requires a stable 5 V supply, a buck converter is needed to safely reduce and regulate the input voltage. Supplying the ESP32 with a voltage above its rated input could damage the microcontroller and other components.
+
+The LM2596S DC-DC Step Down Buck Converter was selected because it is suitable for the voltage range required in this project. The module can accept an input voltage between approximately 3 V and 40 V and regulate it down to a lower stable output voltage.
+
+For this project, the buck converter will be adjusted to provide a stable 5 V output to power the ESP32 and connected components safely and reliably.
+
 
 ### 5.5 Fuse / Polyfuse
 
