@@ -116,18 +116,44 @@ Input Screw Terminals
         └──→ INA226 Power Sensor → Load Output Terminals → External Load
                          │
                          └── I2C Data → ESP32
-
-
-
+```
 ### 4.2 Power Flow
+
+The DC input first enters the device through the input screw terminals. From there, the input power is split into two paths.
+
+The first path goes to the buck-boost converter. The buck-boost converter provides a stable 5 V output, which is used to power the ESP32, OLED display, LED, and buzzer.
+
+At the same time, the second path goes through the INA226 power monitoring sensor and then continues to the load output terminals. The external load is connected to these output terminals. This allows the INA226 to measure the voltage supplied to the load and the current drawn by the load.
+
 
 ### 4.3 Data Flow
 
+The INA226 power monitoring sensor sends voltage and current readings to the ESP32 using I2C communication. The ESP32 receives this data, processes it in software, and calculates the power value in watts.
+
+The processed data is then sent to the OLED display, where the voltage, current, and power readings are shown to the user. The ESP32 can also control the LED and buzzer based on the measured values, such as activating a warning if the voltage or current goes outside the safe operating range.
+
 ## 5. Component Selection
 
-### 5.1 ESP32 Microcontroller
+### 5.1 ESP32-WROOM-32E Microcontroller
+
+The ESP32-WROOM-32E was chosen because it gives the project enough processing power and input/output pins for the power monitor without making the design too expensive or complicated.
+
+Compared to an Arduino Uno, the ESP32 has a much faster clock speed and a dual-core processor. This allows it to read data from the INA226 sensor, calculate voltage, current, and power values, update the OLED display, and control the warning LED and buzzer without slowing down.
+
+The ESP32 also uses I2C communication, which is useful because both the INA226 sensor and OLED display can share the same SDA and SCL lines. This reduces wiring and keeps the circuit layout simpler.
+
+Although the project does not currently require wireless features, the built-in WiFi and Bluetooth are useful advantages of the ESP32. They allow the design to be expanded later for data logging, wireless monitoring, or sending readings to a phone or computer.
+
+Overall, the ESP32 was selected because it is low cost, powerful, widely supported, and suitable for real-time monitoring in this project
 
 ### 5.2 INA226 Power Monitoring Sensor
+
+The INA226 power monitoring sensor was selected because it is capable of accurately measuring both bus voltage and current while remaining suitable for the scale of this project. It provides a good balance between performance, cost, and simplicity without being unnecessarily complex.
+
+The INA226 can measure bus voltages up to 36 V and current levels depending on the value of the shunt resistor used on the module. The module purchased is rated for up to approximately 3 A, however the exact current limit will depend on the installed shunt resistor. As the specifications of the included shunt resistor were not provided in the product listing, the exact rating will be confirmed once the module arrives.
+
+If required, the shunt resistor can be replaced using soldering equipment to better suit the current range and accuracy requirements of the project.
+
 
 ### 5.3 OLED Display
 
