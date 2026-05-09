@@ -37,7 +37,7 @@ Input Teminal
 
 The design process for this project is documented separately here:
 
-[View Design Process](docs/design_process.md)
+[Design Process](Design_Process.md)
 
 
 
