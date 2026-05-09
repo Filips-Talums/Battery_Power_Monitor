@@ -56,11 +56,40 @@ The fuse/polyfuse and INA226 module should be selected so they can safely suppor
 
 ### 3.3 Measurements Required
 
+The power monitor is required to display **voltage**, **current**, and **power** in real time.
+
+- **Voltage** should be displayed in volts (V).
+- **Current** should be displayed in amps (A), or milliamps (mA) for lower current readings.
+- **Power** should be displayed in watts (W).
+
+Power will be calucalted using the measured voltage and current
+
+Power = Current x Voltage
+
+The displayed values should use a suitable number of decimal places so the readings are clear and easy to understand.
+
 ### 3.4 Display Requirements
+
+The display should be clear and readable from a normal working distance when the device is being used on a desk or workbench. The readings should also be visible from different viewing angles so the user does not need to position themselves directly above the display.
+
+The user interface should be simple and easy to understand at a glance. Voltage, current, and power readings should be clearly labelled with their correct units, such as V, A, mA, and W.
 
 ### 3.5 Safety Requirements
 
+The power monitor should include basic safety features to reduce the risk of damage to the monitor itself and the connected load.
+
+- **Overcurrent protection:** A fuse or resettable polyfuse should be used on the input/load path. This protects the circuit if the external load draws too much current or if a short circuit occurs.
+
+- **Reverse polarity protection:** The input should include protection against the power source being connected the wrong way around. This reduces the risk of damaging the ESP32, INA226, OLED display, and connected load.
+
+- **Overvoltage warning:** The INA226 should be used to detect if the input voltage is above the specified operating range. If the voltage exceeds the safe limit, the ESP32 should display a warning on the OLED screen.
+
+- **Accurate readings:** The device should provide reliable voltage and current readings so the user can identify abnormal current draw or voltage issues before damage occurs.
+
+
 ### 3.6 Size and Usability Requirements
+
+The device is required to be 
 
 ## 4. System Overview
 
