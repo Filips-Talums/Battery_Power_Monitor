@@ -40,15 +40,21 @@ The circuit should include basic protection features such as a fuse or polyfuse 
 
 The device should be simple to use. The user should be able to connect a power source and external load using screw terminals, power the device on, and quickly view live voltage, current, and power readings.
 
-
 ### 3.1 Input Voltage Range
 
+The device should support a DC input voltage range of **5 V to 12 V**, which suits small electronics projects such as microcontroller circuits, sensors, LEDs, and low-power modules.
 
+A **5 V buck-boost converter** is required to provide a stable 5 V supply for the ESP32 and OLED display, even when the input voltage varies between 5 V and 12 V. This is needed because a standard buck converter may not reliably output 5 V when the input is also 5 V.
 
-
-
+If an adjustable buck-boost converter is used, the adjustment screw or control point should be accessible without needing to disassemble the device. This allows the output voltage to be checked or adjusted during setup and maintenance.
 
 ### 3.2 Current Range
+
+The first iteration of the power monitor will be designed for small electronics projects with a current range of **0–3 A**. This range is suitable for low-power sensor circuits, microcontroller projects, LED modules, and small single-board computer projects.
+
+A 3 A limit gives more headroom than a 1 A design, as some devices can draw short current spikes during startup or when extra peripherals are connected. For example, a Raspberry Pi or similar board may draw around 1 A or more depending on the connected accessories and workload.
+
+The fuse/polyfuse and INA226 module should be selected so they can safely support the chosen **0–3 A** current range.
 
 ### 3.3 Measurements Required
 
