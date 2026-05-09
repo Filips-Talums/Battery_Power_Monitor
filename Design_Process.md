@@ -89,11 +89,35 @@ The power monitor should include basic safety features to reduce the risk of dam
 
 ### 3.6 Size and Usability Requirements
 
-The device is required to be 
+The device should be compact enough for easy storage, transport, and use on a desk or workbench. The target size is approximately the size of three 9 V batteries placed together.
+
+The internal layout should be designed to use space efficiently. Modules may be stacked or arranged in layers inside the chassis if this does not cause overheating, wiring strain, or difficulty accessing key components.
+
+The device should have a stable physical design so it does not move around easily when wires are connected. The weight should be distributed evenly across the chassis to reduce the risk of the device being pulled or knocked off the table during use.
+
+The device should be simple to use and operate as a plug-and-play monitor. It should be powered from the same input source being measured, so no separate external power supply is required for the ESP32, OLED display, or sensor circuit.
 
 ## 4. System Overview
 
 ### 4.1 Block Diagram
+
+```text
+6–12 V DC Input
+        │
+        ▼
+Input Screw Terminals
+        │
+        ├──→ Buck/Buck-Boost Converter → 5 V → ESP32
+        │                                      │
+        │                                      ├──→ OLED Display
+        │                                      ├──→ LED Warning
+        │                                      └──→ Buzzer Warning
+        │
+        └──→ INA226 Power Sensor → Load Output Terminals → External Load
+                         │
+                         └── I2C Data → ESP32
+
+
 
 ### 4.2 Power Flow
 
