@@ -169,10 +169,30 @@ The LM2596S DC-DC Step Down Buck Converter was selected because it is suitable f
 
 For this project, the buck converter will be adjusted to provide a stable 5 V output to power the ESP32 and connected components safely and reliably.
 
+https://www.ti.com/lit/ds/symlink/lm2596.pdf
 
 ### 5.5 Fuse / Polyfuse
 
+A 2 A resettable polyfuse is included to protect the circuit from excessive current caused by faults such as short circuits or wiring mistakes. If the current exceeds the safe operating limit, the polyfuse temporarily increases in resistance to reduce current flow and automatically resets once it cools down.
+
+The polyfuse helps prevent components from failing, PCB traces from burning, and wires from overheating during fault conditions within the circuit.
+
+A 2 A limit was selected as it matches the approximate safe operating range of the LM2596 buck converter used in the project while still providing protection for the circuit.
+
+
 ### 5.6 Capacitors
+
+Additional capactiors outside the preset modules mentioned before are required at the voltage source and the digital in pin of the esp32
+
+At the voltage source between buck converter and Vs a 330 uf electroylitc through pin capcaitor will be used as in the datasheet it specifys to use this capacitor for the maximum voltage of 15v and a voltage out of 5V
+
+At the analog in pins for the ESP-32 a 0.1 muf capcaitor is required to reduce noise that may affect readings from the power sensor 
+
+### 5.7 Diodes
+
+A diode is required at the voltage input that can withstand up to 2 amps of saturation currents while not inducing a considrerable voltage drop affecting the buck converter. Diode in place to prevent damage if Vs is connected in reverse polarity 
+
+
 
 ### 5.7 Input and Output Terminals
 
