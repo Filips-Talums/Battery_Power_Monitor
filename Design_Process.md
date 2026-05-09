@@ -14,8 +14,6 @@ This project is designed to make voltage, current, and power usage visible in re
 
 ## 3. Design Requirements
 
-The design requirements for this project are as follows:
-
 ### Compact Design
 
 The device should be small enough to be easily stored, carried, and used on a desk or workbench without taking up too much space.
