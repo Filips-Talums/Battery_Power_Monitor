@@ -11,25 +11,42 @@ When testing small electronics projects, it can be difficult to know how much cu
 
 This project is designed to make voltage, current, and power usage visible in real time. By placing the monitor between the power source and the external load, faults can be spotted earlier and diagnosed more quickly. This should reduce the chance of damaging components and make testing small electronics projects safer and easier.
 
+
 ## 3. Design Requirements
 
-The design requirements are as followed:
+The design requirements for this project are as follows:
 
-- Compact: Maximise portability, the comfort to use and storage efficency.
+### Compact Design
 
-- Optimal Weight Distribution: The device needs to comffortably sit on the table without the risk of it easily being nuged and falling off the table.
+The device should be small enough to be easily stored, carried, and used on a desk or workbench without taking up too much space.
 
-- Easy to Read: The UI has to be easily understandable and viewable at different angles for maximise comfortability when used
+### Stable Physical Design
 
-- Accurate Readings: The device has to be able to efficently and accuratly read voltage, current and power pulled by the load.
+The device should sit securely on a table during use. It should not be easily knocked over or pulled off the table when wires are connected.
 
-- Saftey Features: The circuit must have saftey features to prevent frying components within the device due to reverse polarity or over saturation of current.
+### Easy-to-Read Display
 
-- Quick Usability: The device has to be plug and play where time is minimised between powering a external project all while being accurate and safe.
+The voltage, current, and power readings should be clearly shown on the OLED display. The user interface should be simple and readable from normal viewing angles while working at a desk.
 
+### Accurate Readings
+
+The device should measure voltage, current, and power with enough accuracy for testing small electronics projects. The readings should be compared against a multimeter during testing to check for error.
+
+### Safety Features
+
+The circuit should include basic protection features such as a fuse or polyfuse to protect against excessive current. Reverse polarity protection should also be considered to reduce the risk of damaging the device if the input is connected incorrectly.
+
+### Quick Usability
+
+The device should be simple to use. The user should be able to connect a power source and external load using screw terminals, power the device on, and quickly view live voltage, current, and power readings.
 
 
 ### 3.1 Input Voltage Range
+
+
+
+
+
 
 ### 3.2 Current Range
 
