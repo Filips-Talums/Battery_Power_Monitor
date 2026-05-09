@@ -25,12 +25,12 @@ A power pack varrying from 6v to 12v is conneced using screw terminals where the
 
 DC power source
    │
-   ▼
+   |
 Input Teminal 
    │
-   ├──→ 5 V regulator → ESP32 + OLED
+   |----- 5 V regulator → ESP32 + OLED
    │
-   └──→ fuse → INA226 →  LOAD output terminals  → external device
+   ----- fuse → INA226 →  LOAD output terminals  → external device
 
 
 
