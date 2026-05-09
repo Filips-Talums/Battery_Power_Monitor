@@ -33,5 +33,12 @@ Input Teminal
    ----- fuse → INA226 →  LOAD output terminals  → external device
 
 
+## Design Process
+
+The design process for this project is documented separately here:
+
+[View Design Process](docs/design_process.md)
+
+
 
    
