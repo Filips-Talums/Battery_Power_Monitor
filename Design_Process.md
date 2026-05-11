@@ -226,6 +226,15 @@ A possible future improvement would be to use the ALERT pin as part of an automa
 
 ### 6.3 ESP32 Power Supply
 
+The ESP32 receives a stable 5 V supply from the LM2596 buck converter. The 330 µF capacitor is placed near the buck converter input to help smooth voltage dips before regulation.
+
+A stable 5 V supply is required because voltage drops or electrical noise could cause the ESP32 to reset, lose communication with the INA226, cause OLED display errors, or display unreliable readings.
+
+The onboard voltage regulator on the ESP32 development board reduces the 5 V input to 3.3 V. This 3.3 V supply is used to power the INA226 module, OLED display, LED, and suitable low-power output components.
+
+All components share a common ground connection, which provides a common voltage reference for stable communication and accurate measurement through the INA226.
+
+
 ### 6.4 I2C Communication
 
 ### 6.5 Display Output
