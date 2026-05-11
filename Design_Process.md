@@ -190,17 +190,39 @@ At the analog in pins for the ESP-32 a 0.1 muf capcaitor is required to reduce n
 
 ### 5.7 Diodes
 
-A diode is required at the voltage input that can withstand up to 2 amps of saturation currents while not inducing a considrerable voltage drop affecting the buck converter. Diode in place to prevent damage if Vs is connected in reverse polarity 
+A diode is placed at the voltage input to protect the circuit if the supply voltage is connected with reverse polarity. If the positive and negative terminals are connected the wrong way around, the diode helps prevent current from flowing through the circuit in the wrong direction, reducing the risk of damage to the buck converter, ESP32, and other components.
 
+A Schottky diode is suitable for this part of the circuit because it has a lower forward voltage drop than a standard silicon diode. This means less voltage is lost across the diode, allowing more of the input voltage to reach the buck converter.
 
+The diode selected should be able to handle the expected input voltage range of up to 15 V and the chosen current range of approximately 2 A.
+
+1N5822 schottky diode chosen
 
 ### 5.7 Input and Output Terminals
+
+Screw terminals will be used if a PCB is manufactured as they provide a simple and reliable method of connecting input and output wires. They also allow wires to be easily removed or replaced without soldering, making the system more interchangeable and easier to test.
+
+A 5 mm pitch screw terminal was selected as it is commonly available and capable of handling voltages and currents far above the requirements of this project, typically up to approximately 250 V and 10 A depending on the model used. This provides significant headroom while also allowing the same terminals to be reused in future electronics projects.
 
 ## 6. Circuit Design
 
 ### 6.1 Input Power Path
 
+The power source is connected to a 1x2 screw terminal. From the positive input terminal, the track passes through the reverse polarity protection diode and the 2 A polyfuse before reaching the VIN+ input of the buck converter. The negative input terminal is connected to the common ground of the circuit.
+
+A 330 µF electrolytic capacitor is placed in parallel between the input voltage line and ground, close to the buck converter input. This helps smooth the input voltage and reduce voltage dips before regulation.
+
+0.1 µF ceramic capacitors are placed between the VCC and GND pins of the ESP32, INA226 module, and OLED display to reduce high frequency electrical noise and interference. These capacitors are positioned as close as possible to the power pins of each component to improve voltage stability and reduce the effect of sudden current spikes within the circuit.
+
 ### 6.2 Load Measurement Path
+
+The load measurement path begins at the protected input voltage line after the reverse polarity diode and polyfuse. This line connects to the IN+ pin of the INA226 module. The current then passes through the INA226 shunt resistor and exits through the IN- pin, which connects to the output screw terminal and then to the external load.
+
+The INA226 measures the voltage drop across its shunt resistor to calculate the load current. The VBUS pin is connected to the IN+ side of the measurement path so that the INA226 can also measure the bus voltage being supplied to the load.
+
+The INA226 communicates with the ESP32 using I2C. The SDA and SCL pins connect to ESP32 GPIO 27 and GPIO 14 respectively. The ALERT pin connects to ESP32 GPIO 26 and can be used to trigger a warning if the measured values exceed a set limit.
+
+A possible future improvement would be to use the ALERT pin as part of an automatic protection system. If an overcurrent or fault condition is detected, the ESP32 could use a transistor, MOSFET, or relay driver circuit to disconnect the load as an additional safety feature.
 
 ### 6.3 ESP32 Power Supply
 
