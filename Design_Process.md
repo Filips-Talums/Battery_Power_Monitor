@@ -260,7 +260,7 @@ The following GPIO outputs are used:
 The following GPIO Outputs used:
 
          BUZZER
-        - VCC = GPIO22
+        - Signal Pin = GPIO22
          LED
         - VCC = GPIO23
 
@@ -288,6 +288,33 @@ A 330 µF capacitor is placed near the buck converter input to help smooth volta
 ## 7. Software Design
 
 ### 7.1 Sensor Reading
+
+First a library is required to be used, Wire.h, to allow the esp 32 to communicate through I2C. I2C allows easy communication between componenets which can be called by their uniqe address.
+The protocole is started by the line **Wire.begin()** where in the brackets the respected pins would be called,
+in this project the pins which would be called where defined in the I2C Communication section which will be 19 and 18: Wire.begin(19,18). This initalises I2C bus where they can easily be implemented to communicated between the OLED and INA226.
+
+
+
+Commands that will be used to initalise and extract data from the INA226:
+
+        - **bool begin()** Used to initalise the class / INA226
+        - **bool isConnected()** Verifiys if INA226 was foun on the I2C Bus
+        - **setMaxCurrentShunt()** Sets a Maximum current across the shunt, if exceeeded the Alert pin emmits, later be used to shut of the circuit using a transitor.
+        - **float getBusVoltage_mV()** Calls the Bus Voltage in mV
+        - **float getShuntVoltage_mV()** Calls the Shunt Voltage / Voltage drop across the shunt resistor
+        - **float getCurrent_mA()** Calls the current flwoing through shunt resistor
+        - **float getPower_mW()** Calls the power which in the library caluclated by (BusV x Current) = Power
+        - **bool isConversionReady()** Returns a bolean if there is new data ready, used for later iterations of projects as more complicated however more accurate
+
+
+
+
+
+INA226 library used:
+https://github.com/RobTillaart/INA226
+
+
+
 
 ### 7.2 Power Calculation
 
