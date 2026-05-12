@@ -21,7 +21,7 @@ A personal project that can measure a wide range of batteries up to 15v providin
 
 ## How It Works 
 
-A power pack varrying from 6v to 12v is conneced using screw terminals where then it feeds paralel into the power sensor (INA226) then to the esp32 where then the data is processed and emitted onto display. The source further goes to external project where then the current drawn can be calucalted with the power value (watts)
+A power pack varrying from 5v to 15v is conneced using screw terminals where then it feeds paralel into the power sensor (INA226) then to the esp32 where then the data is processed and emitted onto display. The source further goes to external project where then the current drawn can be calucalted with the power value (watts)
 
 DC power source
    │
