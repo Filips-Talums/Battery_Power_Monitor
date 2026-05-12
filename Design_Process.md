@@ -182,7 +182,8 @@ A 2 A limit was selected as it matches the approximate safe operating range of t
 
 ### 5.6 Capacitors
 
-Additional capactiors outside the preset modules mentioned before are required at the voltage source and the digital in pin of the esp32
+Additional capactiors outside the pre<img width="1172" height="806" alt="Screenshot 2026-05-12 at 12 44 32" src="https://github.com/user-attachments/assets/db69435d-537d-4ba5-8295-d6f278ebc61e" />
+set modules mentioned before are required at the voltage source and the digital in pin of the esp32
 
 At the voltage source between buck converter and Vs a 330 uf electroylitc through pin capcaitor will be used as in the datasheet it specifys to use this capacitor for the maximum voltage of 15v and a voltage out of 5V
 
@@ -205,6 +206,8 @@ Screw terminals will be used if a PCB is manufactured as they provide a simple a
 A 5 mm pitch screw terminal was selected as it is commonly available and capable of handling voltages and currents far above the requirements of this project, typically up to approximately 250 V and 10 A depending on the model used. This provides significant headroom while also allowing the same terminals to be reused in future electronics projects.
 
 ## 6. Circuit Design
+
+<img width="1172" height="806" alt="Screenshot 2026-05-12 at 12 44 32" src="https://github.com/user-attachments/assets/e40972f7-4f84-432a-91a8-0e3029349fcc" />
 
 ### 6.1 Input Power Path
 
@@ -236,6 +239,8 @@ All components share a common ground connection, which provides a common voltage
 
 
 ### 6.4 I2C Communication
+
+At the moment the I2C communication paths between components is what is closer on my kicad schematic 
 
 ### 6.5 Display Output
 
