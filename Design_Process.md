@@ -287,6 +287,9 @@ A 330 µF capacitor is placed near the buck converter input to help smooth volta
 
 ## 7. Software Design
 
+[INSERT C++ FILE WHEN FINSIHED]
+
+
 ### 7.1 Sensor Reading
 
 First a library is required to be used, Wire.h, to allow the esp 32 to communicate through I2C. I2C allows easy communication between componenets which can be called by their uniqe address.
@@ -307,12 +310,21 @@ Commands that will be used to initalise and extract data from the INA226:
 INA226 library used:
 https://github.com/RobTillaart/INA226
 
-
-### 7.2 Power Calculation
-
-### 7.3 OLED Display Layout
-
 ### 7.4 Warning / Error Messages
+
+- Overvoltage:
+  
+- Undervoltage:
+
+- Overcurrent:
+
+- Sensor Not Found:
+
+- I2C Communication Error:
+
+- Weak Battery:
+
+- Measurement Overflow:
 
 ## 8. Prototype Testing
 
