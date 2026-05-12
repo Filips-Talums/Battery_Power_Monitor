@@ -293,8 +293,6 @@ First a library is required to be used, Wire.h, to allow the esp 32 to communica
 The protocole is started by the line **Wire.begin()** where in the brackets the respected pins would be called,
 in this project the pins which would be called where defined in the I2C Communication section which will be 19 and 18: Wire.begin(19,18). This initalises I2C bus where they can easily be implemented to communicated between the OLED and INA226.
 
-
-
 Commands that will be used to initalise and extract data from the INA226:
 
         - **bool begin()** Used to initalise the class / INA226
@@ -306,14 +304,8 @@ Commands that will be used to initalise and extract data from the INA226:
         - **float getPower_mW()** Calls the power which in the library caluclated by (BusV x Current) = Power
         - **bool isConversionReady()** Returns a bolean if there is new data ready, used for later iterations of projects as more complicated however more accurate
 
-
-
-
-
 INA226 library used:
 https://github.com/RobTillaart/INA226
-
-
 
 
 ### 7.2 Power Calculation
