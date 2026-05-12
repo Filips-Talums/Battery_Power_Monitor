@@ -298,14 +298,14 @@ in this project the pins which would be called where defined in the I2C Communic
 
 Commands that will be used to initalise and extract data from the INA226:
 
-        - **bool begin()** Used to initalise the class / INA226
-        - **bool isConnected()** Verifiys if INA226 was foun on the I2C Bus
-        - **setMaxCurrentShunt()** Sets a Maximum current across the shunt, if exceeeded the Alert pin emmits, later be used to shut of the circuit using a transitor.
-        - **float getBusVoltage_mV()** Calls the Bus Voltage in mV
-        - **float getShuntVoltage_mV()** Calls the Shunt Voltage / Voltage drop across the shunt resistor
-        - **float getCurrent_mA()** Calls the current flwoing through shunt resistor
-        - **float getPower_mW()** Calls the power which in the library caluclated by (BusV x Current) = Power
-        - **bool isConversionReady()** Returns a bolean if there is new data ready, used for later iterations of projects as more complicated however more accurate
+- **bool begin()** Used to initalise the class / INA226
+- **bool isConnected()** Verifiys if INA226 was foun on the I2C Bus
+- **setMaxCurrentShunt()** Sets a Maximum current across the shunt, if exceeeded the Alert pin emmits, later be used to shut of the circuit using a transitor.
+- **float getBusVoltage_mV()** Calls the Bus Voltage in mV
+- **float getShuntVoltage_mV()** Calls the Shunt Voltage / Voltage drop across the shunt resistor
+- **float getCurrent_mA()** Calls the current flwoing through shunt resistor
+- **float getPower_mW()** Calls the power which in the library caluclated by (BusV x Current) = Power
+- **bool isConversionReady()** Returns a bolean if there is new data ready, used for later iterations of projects as more complicated however more accurate
 
 INA226 library used:
 https://github.com/RobTillaart/INA226
