@@ -206,8 +206,13 @@ A 5 mm pitch screw terminal was selected as it is commonly available and capable
 
 ## 6. Circuit Design
 
+Inital Circuit Desing:
 <img width="1172" height="806" alt="Screenshot 2026-05-12 at 12 44 32" src="https://github.com/user-attachments/assets/e40972f7-4f84-432a-91a8-0e3029349fcc" />
-(fig.0: Image of first circuit design to be implemented on a breadboard)
+(fig.0: Image of revision 0 circuit design to be implemented on a breadboard)
+
+Modified with a shared I2C bus between OLED and INA226 Modules
+<img width="1172" height="806" alt="Screenshot 2026-05-12 at 13 12 51" src="https://github.com/user-attachments/assets/3a24aa14-821d-4d35-a0b6-d4b96535ad66" />
+(fig.1: Image of revision 1 circuit design to be implemented on a breadboard)
 
 ### 6.1 Input Power Path
 
@@ -240,7 +245,24 @@ All components share a common ground connection, which provides a common voltage
 
 ### 6.4 I2C Communication
 
-At the moment the I2C communication paths between components is what is closer on my kicad schematic 
+At the moment the I2C communication paths between components is what is closer on my kicad schematic in fig.0, it follows as this:
+        
+        *OLED*
+        - SDA = GPIO19
+        - SCL = GPIO18
+        *INA226*
+        - SCL = GPIO27
+        - SDA = GPIO14
+        - ALERT = GPIO26
+
+### 6.5 GPIO Outputs
+
+The following GPIO Outputs used:
+
+        *BUZZER*
+        - VCC = GPIO22
+        *LED*
+        - VCC = GPIO23
 
 ### 6.5 Display Output
 
