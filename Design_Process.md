@@ -245,14 +245,14 @@ All components share a common ground connection, which provides a common voltage
 
 ### 6.4 I2C Communication
 
-At the moment the I2C communication paths between components is what is closer on my kicad schematic in fig.0, it follows as this:
+Figure 0 shows the I2C communication connections between the ESP32, INA226, and OLED display.
+The following GPIO outputs are used:     
         
-        *OLED*
+        *INA226* + *OLED*
         - SDA = GPIO19
         - SCL = GPIO18
+        
         *INA226*
-        - SCL = GPIO27
-        - SDA = GPIO14
         - ALERT = GPIO26
 
 ### 6.5 GPIO Outputs
@@ -266,7 +266,24 @@ The following GPIO Outputs used:
 
 ### 6.5 Display Output
 
+The OLED screen display voltage, current and power draw from the load in a column where the units change respectily to the demical place the data is form si unit of amps
+
+```text
+|=============================|
+|                             |
+|       Voltage = 3.3 V       |
+|       Current = 1 mA        |
+|     PowerDraw = 3.3 mW      |
+|                             |
+|=============================|
+```
 ### 6.6 Protection and Filtering
+
+The circuit includes several protection and filtering components to improve safety and reliability. A Schottky diode is placed at the voltage input to reduce the risk of damage if the supply is connected with reverse polarity.
+
+A 2 A resettable polyfuse is also used to protect the circuit from excessive current caused by faults such as short circuits or wiring mistakes. If the current becomes too high, the polyfuse increases in resistance and limits current flow until it cools down.
+
+A 330 µF capacitor is placed near the buck converter input to help smooth voltage dips before regulation. Additional 0.1 µF ceramic capacitors are placed close to the ESP32, INA226, and OLED power pins to reduce high frequency noise and improve voltage stability.
 
 ## 7. Software Design
 
