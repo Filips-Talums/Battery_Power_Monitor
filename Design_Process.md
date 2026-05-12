@@ -182,8 +182,7 @@ A 2 A limit was selected as it matches the approximate safe operating range of t
 
 ### 5.6 Capacitors
 
-Additional capactiors outside the pre<img width="1172" height="806" alt="Screenshot 2026-05-12 at 12 44 32" src="https://github.com/user-attachments/assets/db69435d-537d-4ba5-8295-d6f278ebc61e" />
-set modules mentioned before are required at the voltage source and the digital in pin of the esp32
+Additional capactiors outside the set modules mentioned before are required at the voltage source and the digital in pin of the esp32
 
 At the voltage source between buck converter and Vs a 330 uf electroylitc through pin capcaitor will be used as in the datasheet it specifys to use this capacitor for the maximum voltage of 15v and a voltage out of 5V
 
