@@ -207,6 +207,7 @@ A 5 mm pitch screw terminal was selected as it is commonly available and capable
 ## 6. Circuit Design
 
 <img width="1172" height="806" alt="Screenshot 2026-05-12 at 12 44 32" src="https://github.com/user-attachments/assets/e40972f7-4f84-432a-91a8-0e3029349fcc" />
+(fig.0: Image of first circuit design to be implemented on a breadboard)
 
 ### 6.1 Input Power Path
 
