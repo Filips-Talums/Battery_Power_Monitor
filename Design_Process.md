@@ -248,20 +248,20 @@ All components share a common ground connection, which provides a common voltage
 Figure 0 shows the I2C communication connections between the ESP32, INA226, and OLED display.
 The following GPIO outputs are used:     
         
-        *INA226* + *OLED*
+        INA226 + OLED
         - SDA = GPIO19
         - SCL = GPIO18
         
-        *INA226*
+         INA226 
         - ALERT = GPIO26
 
 ### 6.5 GPIO Outputs
 
 The following GPIO Outputs used:
 
-        *BUZZER*
+         BUZZER
         - VCC = GPIO22
-        *LED*
+         LED
         - VCC = GPIO23
 
 ### 6.5 Display Output
