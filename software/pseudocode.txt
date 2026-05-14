@@ -1,0 +1,72 @@
+Begin
+
+Define Pins
+
+GPIO 19 = SDA
+GPIO 18 = SCL
+GPIO 26 = ALERT of INA226
+GPIO 22 = BUZZER
+GPIO 23 = LED
+
+
+Define Warning Thresholds
+
+Current > 2 amps
+Voltage < 5 or Voltage > 15 
+( Voltage difference / V-input ) * 100 > 12.5 %
+
+Start I2C communication
+
+Initialise OLED
+
+Initialise INA226
+
+If INA226 not detected 
+  Display 'Sensor Not Found'
+End if
+
+Define Data Variables
+
+BusVoltage = value read from INA226 bus voltage register
+
+Current = value calculated by INA226 using shunt voltage
+
+Power = BusVoltage x Current
+
+
+Loop
+
+  Read Bus voltage
+  Read Current
+  Calculate Power
+  Display Voltage
+  Display Current
+  Display Power
+
+  If Voltage > Maximum Voltage
+    Display Overvoltage Warning
+    Turn on Buzzer 
+  END IF
+
+  IF Voltage < Minimum Voltage
+    Display Undervoltage warning
+    Turn On Buzzer
+  End If
+
+  If Current > Maximum Current
+    Display Overcurrent Warning
+    Turn on Buzzer
+  End if
+
+  If Battery Voltage Drop > 12.5%
+    Display Weak Battery Warning
+  End If
+
+Repeat Loop
+
+END
+  
+
+
+
+
