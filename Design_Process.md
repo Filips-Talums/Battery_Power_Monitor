@@ -319,19 +319,19 @@ https://github.com/RobTillaart/INA226
 
 ### 7.4 Warning / Error Messages
 
-- Overvoltage:
+- Overvoltage: If there is a voltage across the shunt resistor > 15 volts, a warning would be displayed on the screen prompting for the Vs to be disconnected before damage occurs.
   
-- Undervoltage:
+- Undervoltage: If there is a voltage across the shunt resisotr < 5v, a warning would be displayed as the readings can lead to be inaccurate as the esp32then wouldnt be getting the reuiqred voltage as a result
 
-- Overcurrent:
+- Overcurrent: If there is over current across shunt resistor above 2 amps itd be displayed on the screen however I do not belive the current would ever reach as the INA226 module would fail as a result of over current howver a fuse would trip if 2 amps is exceeded.
 
-- Sensor Not Found:
+- Sensor Not Found: Using the isConnected() function from the INA226 module, if the module is dead or not connected properly this would show on the screen 
 
-- I2C Communication Error:
+- I2C Communication Error: If communication between the ESP32 and connected I2C devices fails, an error message would be displayed on the OLED screen. This could occur due to loose wiring, incorrect SDA or SCL connections, incorrect device addresses, or a disconnected component. The ESP32 can detect this if the INA226 or OLED no longer responds on the I2C bus.
 
-- Weak Battery:
+- Weak Battery: Using (inital voltage - load voltage) / inital voltage * 100 if that is above 12.5 % a warning for a weak battery would be shown
 
-- Measurement Overflow:
+- Measurement Overflow: If the measured voltage or current exceeds the measurable range of the INA226, the readings may become inaccurate or invalid. A warning message would be displayed to indicate that the sensor has exceeded its operating limits and the load or supply should be disconnected immediately.
 
 ## 8. Prototype Testing
 
