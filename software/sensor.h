@@ -1,6 +1,6 @@
 #pragma once
 
-bool initialiseSensor();
+bool initializeSensor();
 bool sensorConnected();
 
 float getVoltage();
