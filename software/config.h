@@ -21,3 +21,9 @@ const float WEAK_BATT_PERC = 12.5;
 
 // Shunt Resistor
 const float SHUNT_VAL = 0.1;
+
+// Sensor Address
+
+int INA226_ADDRESS = 0x40;
+
+
