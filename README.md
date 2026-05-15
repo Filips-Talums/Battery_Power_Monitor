@@ -2,43 +2,66 @@
 
 ## Overview
 
-A personal project that can measure a wide range of batteries up to 15v providing the value of voltage power and current 
+Battery_Power_Monitor is a personal electronics project designed to measure and display the voltage, current, and power consumption of external DC-powered devices.
 
-## What I want to Learn
+The system is designed to support a wide range of DC input sources from 5 V to 15 V and aims to act as a compact monitoring tool for electronics development and testing.
 
-- Design a PCB kicad
-- How to test and calibrate a circuit 
-- Understand the use of ESP-32
-- How to document project profesionally on GitHub
+---
 
-## Components
+## Project Goals
 
-- 128x64 OLED LCD Screen
-- ESP-32
-- 5V Step Down Buck Converter MP1584EN
-- Power Monitoring Sensor Module INA226
+Through this project I aim to learn:
+
+- PCB design using KiCad
+- Circuit testing and calibration
+- ESP32 microcontroller development
+- Embedded systems programming using C++
+- Professional project documentation using GitHub
+- Power monitoring and sensor integration
+
+---
+
+## Components Used
+
+- ESP32 Development Board
+- INA226 Power Monitoring Sensor
+- 128x64 I2C OLED Display
+- MP1584EN 5 V Buck Converter
 - Screw Terminals
+- Electrolytic and Ceramic Capacitors
+- Fuse Protection
 
-## How It Works 
+---
 
-A power pack varrying from 5v to 15v is conneced using screw terminals where then it feeds paralel into the power sensor (INA226) then to the esp32 where then the data is processed and emitted onto display. The source further goes to external project where then the current drawn can be calucalted with the power value (watts)
+## How It Works
 
-DC power source
-   │
-   |
-Input Teminal 
-   │
-   |----- 5 V regulator → ESP32 + OLED
-   │
-   ----- fuse → INA226 →  LOAD output terminals  → external device
+An external DC power source between 5 V and 15 V is connected through screw terminals.
 
+The input power is split into two sections:
 
-## Design Process
+- A regulated 5 V supply powers the ESP32 and OLED display
+- The main power line passes through the INA226 current and voltage sensor before reaching the external load
 
-The design process for this project is documented separately here:
+The INA226 measures:
 
-[Design Process](Design_Process.md)
+- Bus Voltage
+- Current Draw
+- Power Consumption
 
+The ESP32 processes this data and displays the measured values on the OLED screen.
 
+The device is intended to help monitor power usage, diagnose faults, and test small electronics projects safely.
 
-   
+---
+
+## System Diagram
+
+```text
+DC Power Source (5 V - 15 V)
+            │
+            ▼
+      Input Terminals
+            │
+            ├──→ 5 V Buck Converter ──→ ESP32 ──→ OLED Display
+            │
+            └──→ Fuse ──→ INA226 Sensor ──→ Load Output ──→ External Device
