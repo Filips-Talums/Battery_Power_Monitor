@@ -65,3 +65,28 @@ DC Power Source (5 V - 15 V)
             ├──→ 5 V Buck Converter ──→ ESP32 ──→ OLED Display
             │
             └──→ Fuse ──→ INA226 Sensor ──→ Load Output ──→ External Device
+```
+
+---
+
+## Planned Features
+
+- Real-time voltage monitoring
+- Current measurement
+- Power calculation
+- OLED live display
+- Undervoltage warning
+- Overcurrent warning
+- Audible buzzer alerts
+- Compact PCB design
+
+---
+
+## Repository Structure
+
+```text
+docs/           → Project images and documentation
+hardware/       → KiCad files and schematics
+software/       → ESP32 firmware and PlatformIO projects
+examples/       → Small test programs and experiments
+
