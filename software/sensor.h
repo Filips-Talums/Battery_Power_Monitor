@@ -1,1 +1,9 @@
-// TO DO:  Declare what sensor functions will be used 
+#pragma once
+
+bool initialiseSensor();
+bool sensorConnected();
+
+float getVoltage();
+float getCurrent();
+float getPower();
+
