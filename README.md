@@ -56,7 +56,7 @@ The device is intended to help monitor power usage, diagnose faults, and test sm
 
 ## System Diagram
 
-![System Diagram](docs/images/system_diagram.png)
+![System Diagram](docs/images/Supply_Power_Monitor.png)
 
 ### Power Flow
 
