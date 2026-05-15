@@ -24,6 +24,6 @@ const float SHUNT_VAL = 0.1;
 
 // Sensor Address
 
-int INA226_ADDRESS = 0x40;
+const int INA226_ADDRESS = 0x40;
 
 

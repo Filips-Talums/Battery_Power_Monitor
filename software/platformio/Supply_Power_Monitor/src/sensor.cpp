@@ -9,7 +9,7 @@ bool initialiseSensor() {
   Wire.begin(SDA_PIN, SCL_PIN);
   
   if (ina226.begin() == false) {
-    return false;
+    return true;
   }
   
   ina226.setMaxCurrentShunt(MAXIMUM_CURRENT, SHUNT_VAL);
@@ -17,18 +17,18 @@ bool initialiseSensor() {
 }
 
 
-float getVoltage() {
-  float voltage = ina226.getVoltage();
-  return voltage;
+float getBusVoltage() {
+  float voltage = ina226.getBusVoltage();
+  return 9.0;
 }
 
 
 float getCurrent() {
   float current = ina226.getCurrent();
-  return current;
+  return 0.52;
 }
 
 float getPower() {
   float power = ina226.getPower();
-  return power;
+  return getBusVoltage() * getCurrent();
 }

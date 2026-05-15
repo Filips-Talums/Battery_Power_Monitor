@@ -3,7 +3,7 @@
 bool initialiseSensor();
 bool sensorConnected();
 
-float getVoltage();
+float getBusVoltage();
 float getCurrent();
 float getPower();
 

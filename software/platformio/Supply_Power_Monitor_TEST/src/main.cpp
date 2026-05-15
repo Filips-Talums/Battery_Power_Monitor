@@ -20,7 +20,7 @@ void setup() {
 
 void loop() {
 
-  float voltage = getVoltage();
+  float voltage = getBusVoltage();
   float current = getCurrent();
   float power = getPower();
 
@@ -31,7 +31,7 @@ void loop() {
   Serial.println(current);
 
   
-  Serial.print("Power (W): ");
+  Serial.print("Power   (W): ");
   Serial.println(power);
 
   Serial.println();
