@@ -18,3 +18,6 @@ const float MAXIMUM_CURRENT = 2.0;
 
 // Battery Warning Threshold
 const float WEAK_BATT_PERC = 12.5;
+
+// Shunt Resistor
+const float SHUNT_VAL = 0.1;
