@@ -56,37 +56,20 @@ The device is intended to help monitor power usage, diagnose faults, and test sm
 
 ## System Diagram
 
-```text
-DC Power Source (5 V - 15 V)
-            │
-            ▼
-      Input Terminals
-            │
-            ├──→ 5 V Buck Converter ──→ ESP32 ──→ OLED Display
-            │
-            └──→ Fuse ──→ INA226 Sensor ──→ Load Output ──→ External Device
-```
+![System Diagram](docs/images/system_diagram.png)
 
----
-
-## Planned Features
-
-- Real-time voltage monitoring
-- Current measurement
-- Power calculation
-- OLED live display
-- Undervoltage warning
-- Overcurrent warning
-- Audible buzzer alerts
-- Compact PCB design
-
----
-
-## Repository Structure
+### Power Flow
 
 ```text
-docs/           → Project images and documentation
-hardware/       → KiCad files and schematics
-software/       → ESP32 firmware and PlatformIO projects
-examples/       → Small test programs and experiments
-
+DC Input (5 V - 15 V)
+        │
+        ├──→ Buck Converter (5 V)
+        │          │
+        │          └──→ ESP32 ──→ OLED Display
+        │                        └──→ Buzzer Warning
+        │
+        └──→ Fuse Protection
+                   │
+                   └──→ INA226 Power Monitor
+                                │
+                                └──→ Load Output
