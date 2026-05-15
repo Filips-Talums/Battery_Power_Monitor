@@ -2,7 +2,7 @@
 
 ## Overview
 
-Battery_Power_Monitor is a personal electronics project designed to measure and display the voltage, current, and power consumption of external DC-powered devices.
+Battery_Power_Monitor is ESP32-based power monitoring system for measuring voltage, current, and power consumption of DC electronics projects.
 
 The system is designed to support a wide range of DC input sources from 5 V to 15 V and aims to act as a compact monitoring tool for electronics development and testing.
 
