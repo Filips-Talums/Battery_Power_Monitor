@@ -163,12 +163,17 @@ The 128x64 resolution provides enough space to display all key readings at the s
 
 ### 5.4 Buck Converter
 
-The input voltage for the project is expected to vary between 5 V and 12 V. As the ESP32 requires a stable 5 V supply, a buck converter is needed to safely reduce and regulate the input voltage. Supplying the ESP32 with a voltage above its rated input could damage the microcontroller and other components.
+The input voltage for the project is expected to vary between 5 V and 15 V. As the ESP32 requires a stable 5 V supply, a buck converter is needed to safely reduce and regulate the input voltage. Supplying the ESP32 with a voltage above its rated input could damage the microcontroller and other components.
 
-The LM2596S DC-DC Step Down Buck Converter was selected because it is suitable for the voltage range required in this project. The module can accept an input voltage between approximately 3 V and 40 V and regulate it down to a lower stable output voltage.
+The LM2596S DC-DC Step-Down Buck Converter Module was selected because it is suitable for the voltage range required in this project while remaining simple to prototype with during development. The module can accept an input voltage between approximately 4.5 V and 40 V and regulate it down to a lower stable output voltage.
 
-For this project, the buck converter will be adjusted to provide a stable 5 V output to power the ESP32 and connected components safely and reliably.
+The module also includes the main supporting components required for switching regulation already mounted on the PCB, making it easier to integrate into a breadboard prototype before designing a custom PCB later in development.
 
+Although the module is commonly advertised as capable of supplying up to 3 A, this value is treated as a maximum module rating rather than the expected continuous operating current within this project. The ESP32, OLED display, INA226 module, and buzzer require significantly less current, meaning the LM2596S provides sufficient overhead for stable operation.
+
+For this project, the buck converter will be adjusted and verified using a multimeter before connecting the ESP32 to ensure a stable 5 V output is supplied to the circuit safely and reliably.
+
+LM2596 Datasheet:
 https://www.ti.com/lit/ds/symlink/lm2596.pdf
 
 ### 5.5 Fuse / Polyfuse
@@ -182,11 +187,13 @@ A 2 A limit was selected as it matches the approximate safe operating range of t
 
 ### 5.6 Capacitors
 
-Additional capactiors outside the set modules mentioned before are required at the voltage source and the digital in pin of the esp32
+Capacitors are included to improve voltage stability and reduce electrical noise within the circuit.
 
-At the voltage source between buck converter and Vs a 330 uf electroylitc through pin capcaitor will be used as in the datasheet it specifys to use this capacitor for the maximum voltage of 15v and a voltage out of 5V
+A 330 µF electrolytic capacitor is placed in parallel between the input voltage line and ground close to the buck converter input. This helps smooth sudden voltage dips and provides extra stability before the voltage is regulated down to 5 V.
 
-At the analog in pins for the ESP-32 a 0.1 muf capcaitor is required to reduce noise that may affect readings from the power sensor 
+0.1 µF ceramic capacitors are placed between the VCC and GND pins of the ESP32, INA226 module, and OLED display. These capacitors act as local decoupling capacitors and help reduce high-frequency noise caused by switching and sudden current changes.
+
+The electrolytic capacitor is used for bulk voltage smoothing, while the ceramic capacitors are used for high-frequency noise filtering.
 
 ### 5.7 Diodes
 
@@ -264,7 +271,7 @@ The following GPIO Outputs used:
          LED
         - VCC = GPIO23
 
-### 6.5 Display Output
+### 6.6 Display Output
 
 The OLED screen display voltage, current and power draw from the load in a column where the units change respectily to the demical place the data is form si unit of amps
 
@@ -277,7 +284,7 @@ The OLED screen display voltage, current and power draw from the load in a colum
 |                             |
 |=============================|
 ```
-### 6.6 Protection and Filtering
+### 6.7 Protection and Filtering
 
 The circuit includes several protection and filtering components to improve safety and reliability. A Schottky diode is placed at the voltage input to reduce the risk of damage if the supply is connected with reverse polarity.
 
@@ -292,9 +299,14 @@ A 330 µF capacitor is placed near the buck converter input to help smooth volta
 
 ### 7.1 Sensor Reading
 
-First a library is required to be used, Wire.h, to allow the esp 32 to communicate through I2C. I2C allows easy communication between componenets which can be called by their uniqe address.
-The protocole is started by the line **Wire.begin()** where in the brackets the respected pins would be called,
-in this project the pins which would be called where defined in the I2C Communication section which will be 19 and 18: Wire.begin(19,18). This initalises I2C bus where they can easily be implemented to communicated between the OLED and INA226.
+The ESP32 communicates with the INA226 sensor and OLED display using I2C communication. The `Wire.h` library is used to initialise the I2C bus and allow the ESP32 to communicate with connected I2C devices.
+
+I2C allows multiple components to share the same SDA and SCL communication lines. Each device is identified by its own unique I2C address.
+
+For this project, the I2C pins are defined in the I2C Communication section. The bus is initialised using:
+
+```cpp
+Wire.begin(19, 18);
 
 Commands that will be used to initalise and extract data from the INA226:
 
@@ -317,7 +329,7 @@ Commands that will be used to initalise and extract data from the INA226:
 INA226 library used:
 https://github.com/RobTillaart/INA226
 
-### 7.4 Warning / Error Messages
+### 7.2 Warning / Error Messages
 
 - Overvoltage: If there is a voltage across the shunt resistor > 15 volts, a warning would be displayed on the screen prompting for the Vs to be disconnected before damage occurs.
   
