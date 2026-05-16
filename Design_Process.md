@@ -307,7 +307,7 @@ For this project, the I2C pins are defined in the I2C Communication section. The
 
 ```cpp
 Wire.begin(19, 18);
-
+```
 Commands that will be used to initalise and extract data from the INA226:
 
 - **bool begin()** Used to initalise the class / INA226
