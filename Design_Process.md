@@ -273,7 +273,13 @@ The following GPIO Outputs used:
 
 ### 6.6 Display Output
 
-The OLED screen display voltage, current and power draw from the load in a column where the units change respectily to the demical place the data is form si unit of amps
+The OLED display is used to show live voltage, current, and power measurements to the user in real time.
+
+The readings are displayed in a simple vertical layout so they can be quickly understood while testing electronics projects on a workbench.
+
+Depending on the measured current range, the displayed units may automatically switch between amps (A) and milliamps (mA) to improve readability and precision.
+
+Example display layout:
 
 ```text
 |=============================|
