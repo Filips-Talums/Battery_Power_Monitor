@@ -26,7 +26,7 @@ Through this project I aim to learn:
 - ESP32 Development Board
 - INA226 Power Monitoring Sensor
 - 128x64 I2C OLED Display
-- LM2596S DC-DC Step-Down Buck Converter Module
+- 5 V buck-boost converter module for powering the ESP32 from a 5–12 V input
 - Screw Terminals
 - Electrolytic and Ceramic Capacitors
 - Fuse Protection
