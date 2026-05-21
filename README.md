@@ -1,4 +1,4 @@
-# Battery_Power_Monitor
+# Supply_Power_Monitor
 
 ## Overview
 
