@@ -74,6 +74,21 @@ DC Input (5 V - 15 V)
                                 │
                                 └──→ Load Output
 ```
+## Current Status
+
+- Project requirements defined
+- Main components selected
+- System block diagram drafted
+- PlatformIO project created
+- INA226 library added
+- INA226 with ESP32 Software Created
+
+- OLED display integration in progress
+- Circuit design and testing pending
+
+
+
+
 ## Project Documentation
 
 - [Design Process](Design_Process.md)
