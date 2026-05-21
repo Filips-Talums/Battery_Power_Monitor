@@ -73,3 +73,11 @@ DC Input (5 V - 15 V)
                    └──→ INA226 Power Monitor
                                 │
                                 └──→ Load Output
+
+## Project Documentation
+
+- [Design Process](Design_Process.md)
+- [Hardware Files](hardware/)
+- [Software](software/)
+- [Examples](examples/)
+- [Learning Notes](learning/)
