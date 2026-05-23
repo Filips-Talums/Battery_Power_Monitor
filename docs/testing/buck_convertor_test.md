@@ -1,8 +1,6 @@
 # Buck Converter Test
 
-## Set-up
-
-### Soldering
+## Soldering
 
 When the buck converter was received, it did not include pin headers suitable for breadboard use, therefore jumper cables were soldered directly onto the module connections. The module contains four connection points: IN+, IN−, OUT+, and OUT−.
 
@@ -23,7 +21,7 @@ Once all solder joints were completed, the board was cleaned using 95% isopropyl
 
 </p>
 
-### Operation
+## Operation
 
 
 
