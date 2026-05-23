@@ -44,7 +44,6 @@ Immediately after connection, a solid green LED illuminated on the ESP32 develop
       <b>Fig. 3:</b> Adjusting the Buck Converter<br>
       <sub>Adjusting the onboard trimmer potentiometer.</sub>
     </td>
-
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c3f5f7ce-f80b-451a-b753-fe5c0764470c" width="350"><br>
       <b>Fig. 4:</b> Buck Converter Output Verification<br>
