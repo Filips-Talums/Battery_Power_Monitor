@@ -16,15 +16,18 @@ Once all solder joints were completed, the board was cleaned using 95% isopropyl
 <p align="center">
 
   <img src="https://github.com/user-attachments/assets/d1130507-2254-4376-883c-ab38ef57aed5" width="450"><br><br>
-
+  
   <img src="https://github.com/user-attachments/assets/2632b939-eb85-4e35-b2e1-e3fb8aafd26e" width="450"><br><br>
 
 </p>
 
 ## Operation
 
-Initally when the Vs, of 9V, was connected to the in+ / in- juimpers of the buck, a voltage of 8.5 volts was shown on the multimeter. This was changed by using the on board trimmer potentiometer using a trimmer adjustment tools, seen in figure 3, it was turned till the multimter read just slightly above 5v between the out postiive and negative terminal.
+Initially, when the 9 V supply voltage (Vs) was connected to the IN+ and IN− terminals of the buck converter, the multimeter displayed an output voltage of approximately 8.5 V. This output voltage was adjusted using the onboard trimmer potentiometer. A precision adjustment screwdriver, shown in Figure 3, was used to rotate the potentiometer until the multimeter displayed a stable output voltage slightly above 5 V between the OUT+ and OUT− terminals.
 
+Once the output voltage was verified to be a stable 5.03 V using the multimeter, the buck converter was tested by powering the ESP32 development board from the 9 V source through the converter. The OUT+ and OUT− terminals of the buck converter were connected directly to the 5 V and GND pins of the ESP32 using male-to-female jumper cables.
+
+Immediately after connection, a solid green LED illuminated on the ESP32 development board, indicating that a stable power source was present. The multimeter probes remained connected for approximately one minute to monitor the output voltage and ensure that the converter remained stable under operation. During this observation period, the voltage remained constant, confirming that the buck converter was functioning correctly and was suitable for integration into the main project.
 
 
 <p align="center">
