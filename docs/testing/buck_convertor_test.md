@@ -14,12 +14,13 @@ The soldering procedure began by inserting the exposed end of a jumper cable thr
 
 Once all solder joints were completed, the board was cleaned using 95% isopropyl alcohol to remove excess flux residue and contamination from the surface.
 
+
+
+
 <img width="2387" height="1379" alt="Top_View_BuckConvertor" src="https://github.com/user-attachments/assets/d1130507-2254-4376-883c-ab38ef57aed5" />
 
 
-
 <img width="2294" height="3135" alt="Top_Down_SolderingTools" src="https://github.com/user-attachments/assets/2632b939-eb85-4e35-b2e1-e3fb8aafd26e" />
-
 
 
 <img width="3018" height="3735" alt="Adjusting_BuckConvertor" src="https://github.com/user-attachments/assets/9f4256d6-6d5d-4744-b1fd-5f930d8cb047" />
