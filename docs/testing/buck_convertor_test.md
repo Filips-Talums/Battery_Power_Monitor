@@ -28,3 +28,9 @@ Once all solder joints were completed, the board was cleaned using 95% isopropyl
 
 <img width="2923" height="1188" alt="BUCK_OUT_INITIAL_ON" src="https://github.com/user-attachments/assets/c3f5f7ce-f80b-451a-b753-fe5c0764470c" />
 
+<p align="center">
+  <img src="Top_View_BuckConvertor.png" width="450"><br><br>
+  <img src="Top_Down_SolderingTools.png" width="450"><br><br>
+  <img src="Adjusting_BuckConvertor.png" width="450"><br><br>
+  <img src="BUCK_OUT_INITIAL_ON.png" width="450">
+</p>
