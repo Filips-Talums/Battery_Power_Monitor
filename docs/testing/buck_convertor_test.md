@@ -21,6 +21,15 @@ Once all solder joints were completed, the board was cleaned using 95% isopropyl
 
   <img src="https://github.com/user-attachments/assets/2632b939-eb85-4e35-b2e1-e3fb8aafd26e" width="450"><br><br>
 
+</p>
+
+### Operation
+
+
+
+
+<p align="center">
+
   <img src="https://github.com/user-attachments/assets/9f4256d6-6d5d-4744-b1fd-5f930d8cb047" width="450"><br><br>
 
   <img src="https://github.com/user-attachments/assets/c3f5f7ce-f80b-451a-b753-fe5c0764470c" width="450">
