@@ -13,13 +13,21 @@ The soldering procedure began by inserting the exposed end of a jumper cable thr
 Once all solder joints were completed, the board was cleaned using 95% isopropyl alcohol to remove excess flux residue and contamination from the surface.
 
 
-<p align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/d1130507-2254-4376-883c-ab38ef57aed5" width="350"><br>
+      <b>Fig. 1:</b> Top View of Buck Converter<br>
+      <sub>LM2596 buck converter with soldered jumper cables.</sub>
+    </td>
 
-  <img src="https://github.com/user-attachments/assets/d1130507-2254-4376-883c-ab38ef57aed5" width="450"><br><br>
-  
-  <img src="https://github.com/user-attachments/assets/2632b939-eb85-4e35-b2e1-e3fb8aafd26e" width="450"><br><br>
-
-</p>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/2632b939-eb85-4e35-b2e1-e3fb8aafd26e" width="350"><br>
+      <b>Fig. 2:</b> Soldering Tools<br>
+      <sub>Tools used during soldering and voltage adjustment.</sub>
+    </td>
+  </tr>
+</table>
 
 ## Operation
 
@@ -30,10 +38,18 @@ Once the output voltage was verified to be a stable 5.03 V using the multimeter,
 Immediately after connection, a solid green LED illuminated on the ESP32 development board, indicating that a stable power source was present. The multimeter probes remained connected for approximately one minute to monitor the output voltage and ensure that the converter remained stable under operation. During this observation period, the voltage remained constant, confirming that the buck converter was functioning correctly and was suitable for integration into the main project.
 
 
-<p align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/9f4256d6-6d5d-4744-b1fd-5f930d8cb047" width="350"><br>
+      <b>Fig. 3:</b> Adjusting the Buck Converter<br>
+      <sub>Adjusting the onboard trimmer potentiometer.</sub>
+    </td>
 
-  <img src="https://github.com/user-attachments/assets/9f4256d6-6d5d-4744-b1fd-5f930d8cb047" width="450"><br><br>
-
-  <img src="https://github.com/user-attachments/assets/c3f5f7ce-f80b-451a-b753-fe5c0764470c" width="450">
-
-</p>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/c3f5f7ce-f80b-451a-b753-fe5c0764470c" width="350"><br>
+      <b>Fig. 4:</b> Buck Converter Output Verification<br>
+      <sub>Multimeter reading showing a stable 5.03 V output.</sub>
+    </td>
+  </tr>
+</table>
