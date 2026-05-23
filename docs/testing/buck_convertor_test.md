@@ -23,6 +23,7 @@ Once all solder joints were completed, the board was cleaned using 95% isopropyl
 
 ## Operation
 
+Initally when the Vs was connected to the in+ / in- juimpers of the buck, a voltage of 8.5 volts was shown on the multimeter. This was changed by using the on board trimmer potentiometer using a trimmer adjustment tools, it was turned till the multimter read just slightly above 5v between the out postiive and negative terminal
 
 
 
