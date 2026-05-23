@@ -20,7 +20,6 @@ Once all solder joints were completed, the board was cleaned using 95% isopropyl
       <b>Fig. 1:</b> Top View of Buck Converter<br>
       <sub>LM2596 buck converter with soldered jumper cables.</sub>
     </td>
-
     <td align="center">
       <img src="https://github.com/user-attachments/assets/2632b939-eb85-4e35-b2e1-e3fb8aafd26e" width="350"><br>
       <b>Fig. 2:</b> Soldering Tools<br>
