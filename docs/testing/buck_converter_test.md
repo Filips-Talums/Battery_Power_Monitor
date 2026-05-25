@@ -47,16 +47,16 @@ Immediately after connection, a solid green LED illuminated on the ESP32 develop
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c3f5f7ce-f80b-451a-b753-fe5c0764470c" width="350"><br>
       <b>Fig. 4:</b> Buck Converter Output Verification<br>
-      <sub>Buck Converter In-Use.</sub>
+      <sub>Buck converter output verified at approximately 5 V using a digital multimeter.</sub>
     </td>
   </tr>
 </table>
 
 ## Testing Procedure
 
-To verify the buck converter across the voltages specified I used a variable power supply, voltages that will be tested against is 5v - 12v.
+To verify the operation of the buck converter across different input voltages, a variable DC power supply was used. The converter was tested with input voltages ranging from approximately 5 V to 12 V.
 
-With testing was shown 4.5 V Vs is the lowest the power pack can go before the buck converter and the esp32 turns on and the pack max go to 12v whcih is the highest tested, a 15v source is going to have to be sourced to verify it can read up to 15 v
+Testing showed that approximately 4.5 V was the minimum input voltage at which both the buck converter and ESP32 powered on successfully. The maximum available voltage from the variable power supply was 12 V, which was therefore the highest voltage tested. Additional testing using a 15 V supply source will be required to fully verify operation across the intended project voltage range.
 
 ## Testing Results
 
