@@ -51,3 +51,5 @@ Immediately after connection, a solid green LED illuminated on the ESP32 develop
     </td>
   </tr>
 </table>
+
+## Testing
