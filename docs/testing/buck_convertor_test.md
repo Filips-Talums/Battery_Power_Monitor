@@ -52,4 +52,19 @@ Immediately after connection, a solid green LED illuminated on the ESP32 develop
   </tr>
 </table>
 
-## Testing
+## Testing Procedure
+
+To verify the buck converter across the voltages specified I used a variable power supply, voltages that will be tested against is 5v - 12v.
+
+With testing was shown 4.5 V Vs is the lowest the power pack can go before the buck converter and the esp32 turns on and the pack max go to 12v whcih is the highest tested, a 15v source is going to have to be sourced to verify it can read up to 15 v
+
+## Testing Results
+
+| Input Voltage - Vin (V) | Output Voltage - Vout (V) | Observation |
+|---|---|---|
+| 12.03 V | 5.01 V | Stable output voltage |
+| 9.13 V | 5.00 V | Stable output voltage |
+| 7.64 V | 5.01 V | Stable output voltage |
+| 6.10 V | 4.98 V | Stable output voltage |
+| 5.13 V | 4.33 V | ESP32 powered on successfully; however, further testing is required with the INA226 power monitor and OLED display connected to determine the minimum stable operating voltage of the system. |
+
