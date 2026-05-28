@@ -363,6 +363,9 @@ https://github.com/RobTillaart/INA226
 
 ### 8.5 OLED Display Test
 
+<img width="2505" height="4029" alt="Circuit_BB_PreBuzzerLED" src="https://github.com/user-attachments/assets/b93cb701-ea1b-4c2c-a39b-1a4367d8b34e" />
+
+
 ## 9. Calibration
 
 ### 9.1 Multimeter Comparison
