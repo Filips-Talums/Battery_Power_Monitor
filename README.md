@@ -63,11 +63,11 @@ The device is intended to help monitor power usage, diagnose faults, and test sm
 ```text
 DC Input (6 V - 12 V)
         │
-        ├──→ Buck Converter (5 V)
+        ├──→ LM2596S Buck Converter (5 V)
         │          │
         │          └──→ ESP32 ──→ OLED Display
         │                        └──→ Buzzer Warning
-        │
+        │                        └──→ LED Warning
         └──→ Fuse Protection
                    │
                    └──→ INA226 Power Monitor
@@ -76,9 +76,13 @@ DC Input (6 V - 12 V)
 ```
 ## Current Status
 
-The breadboard prototype is now working. The ESP32 successfully reads voltage and shunt voltage from the INA226 power monitoring sensor and displays voltage, current, and power on the OLED display.
+The breadboard prototype is now working. The ESP32 successfully reads bus voltage and shunt voltage from the INA226 power monitoring sensor and displays voltage, current, and power on the OLED display.
 
-Initial voltage calibration has been completed using a multimeter. The raw INA226 bus voltage reading was found to be consistently higher than the multimeter reading, so a software correction factor was applied. Current measurement has also been confirmed by measuring the voltage drop across the R100 shunt resistor.
+Initial voltage calibration has been completed using a multimeter. The raw INA226 bus voltage reading was found to be consistently higher than the multimeter reading, so a software correction factor was applied.
+
+Current calculation has been implemented using the INA226 shunt voltage and the R100 0.1 Ω shunt resistor. Initial current testing has been carried out using resistor loads and a multimeter. The monitor initially under-read current slightly, so a current correction factor was added in software. Further load testing with higher-current loads is still planned.
+
+### Completed
 
 - Project requirements defined
 - Main components selected
@@ -87,8 +91,10 @@ Initial voltage calibration has been completed using a multimeter. The raw INA22
 - INA226 sensor communication with ESP32 working
 - OLED display output working
 - Voltage calibration completed using a multimeter
-- Current measurement confirmed using the R100 shunt resistor
+- Current calculation implemented using shunt voltage
+- Initial current testing completed using resistor loads
 - Breadboard prototype completed
+- Calibrated breadboard prototype software added to repository
 
 ## Software
 
