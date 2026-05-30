@@ -46,14 +46,15 @@ void loop() {
 
 
   float voltage = getBusVoltage();
-  float current = getCurrent();
+  float currentA = getCurrent();
+  float currentmA = currentA * 1000.0; 
   float power = getPower();
 
   Serial.print("Voltage (V): ");
   Serial.println(voltage);
   
   Serial.print("Current (A): ");
-  Serial.println(current);
+  Serial.println(currentA);
 
   
   Serial.print("Power   (W): ");
@@ -67,6 +68,12 @@ void loop() {
 
   Serial.print("Shunt Voltage (mV): ");
   Serial.println(shunt_mV, 6);
+  
+  Serial.print("Current (A): ");
+  Serial.println(currentA, 6);
+
+  Serial.print("Current (mA): ");
+  Serial.println(currentmA , 3);
 
 
   if (displayFrozen == false)

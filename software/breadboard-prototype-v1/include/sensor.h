@@ -7,3 +7,4 @@ float getBusVoltage();
 float getCurrent();
 float getPower();
 float getShuntVoltage_mV();
+float getCurrentmA();

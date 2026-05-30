@@ -31,9 +31,9 @@ float getCurrent() {
   float shuntVoltage_mV = ina226.getShuntVoltage_mV();
   float shuntVoltage_V = shuntVoltage_mV / 1000.0;
 
-  float current_A = shuntVoltage_V / SHUNT_VAL;
+  float currentA = shuntVoltage_V / SHUNT_VAL;
 
-  return current_A;
+  return currentA * CURRENT_CORRECTION;
 }
 
 float getPower() {
@@ -46,3 +46,5 @@ float getPower() {
 float getShuntVoltage_mV() {
   return ina226.getShuntVoltage_mV();
 }
+
+

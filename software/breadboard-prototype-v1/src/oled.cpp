@@ -36,32 +36,45 @@ void initOLED() {
 
 void updateOLED() {
 
+    
     float voltage = getBusVoltage();
-    float current = getCurrent();
+    float currentA = getCurrent();
+    float currentmA = currentA * 1000.0; 
     float power = getPower();
 
     display.clearDisplay();
 
+    // VOLTAGE
     display.setCursor(20,0);
     display.print("VOLTAGE: ");
     display.print(voltage);
     display.println(" V");
 
+    // CURRENT
+
     display.setCursor(20,11);
     display.print("CURRENT: ");
 
-    if (current <= 0 )
+    if (currentA < 1 )
+    {
+        display.print(currentmA);
+        display.println(" mA");
+    }
+    
+    else if (currentA >= 1)
+    {
+        display.print(currentA);
+        display.println(" A");
+    }
+    
+    else
     {
         display.println("N/A");
     }
-    else
-    {
-        display.print(current);
-        display.println(" A");
 
-    }
 
     
+    // POWER
     display.setCursor(20,21);
     display.print("POWER:   ");
    
