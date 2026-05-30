@@ -8,7 +8,7 @@ The system is designed to support a wide range of DC input sources from 6 V to 1
 
 ---
 
-## Project Goals1
+## Project Goals
 
 Through this project I aim to learn:
 
@@ -76,15 +76,22 @@ DC Input (6 V - 12 V)
 ```
 ## Current Status
 
+The breadboard prototype is now working. The ESP32 successfully reads voltage and shunt voltage from the INA226 power monitoring sensor and displays voltage, current, and power on the OLED display.
+
+Initial voltage calibration has been completed using a multimeter. The raw INA226 bus voltage reading was found to be consistently higher than the multimeter reading, so a software correction factor was applied. Current measurement has also been confirmed by measuring the voltage drop across the R100 shunt resistor.
+
 - Project requirements defined
 - Main components selected
 - System block diagram drafted
 - PlatformIO project created
-- INA226 library added
-- INA226 with ESP32 Software Created
+- INA226 sensor communication with ESP32 working
+- OLED display output working
+- Voltage calibration completed using a multimeter
+- Current measurement confirmed using the R100 shunt resistor
+- Breadboard prototype completed
 
-- OLED display integration in progress
-- Circuit design and testing pending
+
+
 
 
 
