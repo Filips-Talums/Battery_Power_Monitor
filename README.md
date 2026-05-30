@@ -90,10 +90,9 @@ Initial voltage calibration has been completed using a multimeter. The raw INA22
 - Current measurement confirmed using the R100 shunt resistor
 - Breadboard prototype completed
 
+## Software
 
-
-
-
+- [Breadboard Prototype V1](software/breadboard-prototype-v1/)
 
 
 ## Project Documentation
