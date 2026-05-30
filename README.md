@@ -4,7 +4,7 @@
 
 Battery_Power_Monitor is an ESP32-based DC inline power monitor designed to measure voltage, current, and power while a DC source powers an external load.
 
-The system is designed to support a wide range of DC input sources from 5 V to 15 V and aims to act as a compact monitoring tool for electronics development and testing.
+The system is designed to support a wide range of DC input sources from 6 V to 16 V and aims to act as a compact monitoring tool for electronics development and testing.
 
 ---
 
@@ -26,7 +26,7 @@ Through this project I aim to learn:
 - ESP32 Development Board
 - INA226 Power Monitoring Sensor
 - 128x64 I2C OLED Display
-- 5 V buck-boost converter module for powering the ESP32 from a 5–15 V input
+- 6 V buck-boost converter module for powering the ESP32 from a 6–16 V input
 - Screw Terminals
 - Electrolytic and Ceramic Capacitors
 - Fuse Protection
@@ -35,11 +35,11 @@ Through this project I aim to learn:
 
 ## How It Works
 
-An external DC power source between 5 V and 15 V is connected through screw terminals.
+An external DC power source between 6 V and 16 V is connected through screw terminals.
 
 The input power is split into two sections:
 
-- A regulated 5 V supply powers the ESP32 and OLED display
+- A regulated 6 V supply powers the ESP32 and OLED display
 - The main power line passes through the INA226 current and voltage sensor before reaching the external load
 
 The INA226 measures:
@@ -61,9 +61,9 @@ The device is intended to help monitor power usage, diagnose faults, and test sm
 ### Power Flow
 
 ```text
-DC Input (5 V - 15 V)
+DC Input (6 V - 16 V)
         │
-        ├──→ Buck Converter (5 V)
+        ├──→ Buck Converter (6 V)
         │          │
         │          └──→ ESP32 ──→ OLED Display
         │                        └──→ Buzzer Warning
