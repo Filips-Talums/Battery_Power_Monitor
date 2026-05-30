@@ -63,7 +63,7 @@ The device is intended to help monitor power usage, diagnose faults, and test sm
 ```text
 DC Input (6 V - 12 V)
         │
-        ├──→ Buck Converter (6 V)
+        ├──→ Buck Converter (5 V)
         │          │
         │          └──→ ESP32 ──→ OLED Display
         │                        └──→ Buzzer Warning
