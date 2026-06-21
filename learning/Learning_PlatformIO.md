@@ -43,3 +43,4 @@ Another issue was caused by defining non-constant values inside the config heade
 The final issue encountered was the Serial Monitor baud rate. The output first appeared as unreadable characters because the monitor speed did not match the baud rate set in the code. This was fixed by adding `monitor_speed = 115200` to the `platformio.ini` file, matching the value used in `Serial.begin(115200)`.
 
 This testing process helped explain the difference between compiling and linking, and showed why modular code needs to be structured carefully.
+

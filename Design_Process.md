@@ -353,45 +353,107 @@ https://github.com/RobTillaart/INA226
 
 ## 8. Prototype Testing
 
-### 8.1 Breadboard Test
+### 8.2 Buck Converter Test & Calibration
 
-### 8.2 Buck Converter Test
+- [Results](testing/buck_converter_test.md/)
 
-### 8.3 INA226 Voltage Test
+### 8.3 INA226 Test & Calibration
 
-### 8.4 INA226 Current Test
+- [Results](testing/ina226_test.md/)
 
 ### 8.5 OLED Display Test
 
+- [Results](testing/oled_display_test.md/)
+
 <img width="2505" height="4029" alt="Circuit_BB_PreBuzzerLED" src="https://github.com/user-attachments/assets/b93cb701-ea1b-4c2c-a39b-1a4367d8b34e" />
 
+### 8.1 Breadboard Test
 
-## 9. Calibration
+The completed breadboard prototype marked an important milestone in the project. The earlier component planning and circuit design produced a working result, with the ESP32 and OLED display powering on successfully and showing voltage, current and power data measured by the INA226.
 
-### 9.1 Multimeter Comparison
 
-### 9.2 Voltage Accuracy
+### 10.4 Wiring and Connection Issues
 
-### 9.3 Current Accuracy
+The selected diode had legs that were too thick to fit securely into the breadboard. Crocodile clips were therefore used to connect it temporarily during testing.
 
-### 9.4 Error Correction
+Apart from this issue, the breadboard wiring was straightforward and no major connection problems occurred during this stage of prototyping. This allowed the project to progress to the next phase: transferring the circuit onto perfboard.
 
-## 10. Problems and Fixes
+The buzzer and LED fault indicators were not included in the breadboard prototype because they had initially been overlooked. These features were added later during the perfboard build.
 
-### 10.1 Power Supply Issues
 
-### 10.2 Sensor Reading Issues
+### 10.5 Final Breadboard Design
 
-### 10.3 Display Issues
+![Breadboard build](images/IMG_2635.jpeg)
 
-### 10.4 Wiring / Connection Issues
+## 11. Perfboard Prototype
 
-## 11. Final Design
 
-### 11.1 Final Circuit Layout
 
-### 11.2 Final Component List
+### 11.1 Design
 
-### 11.3 Final Operating Range
+A perfboard kit containing several different board sizes was purchased for the prototype. Initially, the range of sizes appeared useful. However, it quickly became clear that the mounting holes would only align correctly when matching perfboards of the same dimensions were used.
 
-## 12. Future Improvements
+The kit contained five different sizes. Three were too small to accommodate the required header footprint, while another was unnecessarily large. A suitable intermediate size was selected and proved to be a good fit for the final arrangement.
+
+![Perfboard Kit](images/Perfboard_kit.png)
+
+The final design used two layers of perfboard mounted together with the nylon hex spacers supplied in the kit. This structure allowed the device to be easily disassembled and reassembled for troubleshooting, repairs and future modifications.
+
+Female header sockets were used to mount the ESP32 rather than soldering it permanently. This allowed the ESP32 to be removed and reused later when the custom PCB version is designed and manufactured. The remaining components were soldered permanently onto the perfboards.
+
+The track layout was not planned in enough detail before soldering. The main consideration was wire length, rather than the full routing of power, ground and signal connections.
+
+Solid-core jumper wires were initially intended for the build. However, the supplied wires were unsuitable because solder did not adhere properly to the conductor material. Alternative wire was therefore required to complete the connections reliably.
+
+
+### 11.2 Manufacturing
+
+The input and output screw terminals were mounted first. The protection components were then added in series with the positive input connection, beginning with the Schottky diode followed by the polyfuse.
+
+Where possible, the component legs were used as conductive tracks to reduce the amount of additional wiring required. The ground terminals of the input and output connectors were linked using a section of jumper wire.
+
+The buck converter was mounted next on a separate perfboard positioned near the centre of the assembly. This location allowed it to reach the ESP32 power pins without excessive wire routing.
+
+Once the buck converter had been mounted and connected, the first checkpoint test was carried out. A power supply was connected to the input screw terminal, and the indicator LED on the buck converter illuminated, confirming that power was reaching the module.
+
+The input and output voltages were then measured with a multimeter. The adjustment potentiometer was used to set the converter output to approximately 5 V before the ESP32 was connected.
+
+![Buck converter powered](images/IMG_2775.jpeg)
+
+![Buck converter output test](images/IMG_2776.jpeg)
+
+The INA226 module was then mounted on the opposite side of the same perfboard as the ESP32. Several connection methods were used depending on the available space. These included wrapping stripped jumper wire around header pins before soldering and bridging adjacent pads with solder where the pins were positioned close together.
+
+The INA226 was not tested immediately after installation, which was an oversight. Construction instead continued with the OLED display.
+
+The display was mounted near the top of the second perfboard. Jumper wires were then soldered between the display and the required ESP32 power and I2C connections.
+
+At this stage, the main hardware components had been installed and the project moved on to full circuit testing.
+
+### 12.3 Problems and Solutions
+
+One design issue was that the screw terminals were positioned underneath the board. This made access more awkward during wiring and testing and should be improved in a future version.
+
+During the first full power-up test, the ESP32 was inserted into its socket and the device was connected to the power supply. However, nothing powered on.
+
+A short circuit was suspected because the buck converter indicator LED illuminated when the ESP32 was removed but turned off when the ESP32 was inserted.
+
+An ineffective troubleshooting method was initially attempted by partially inserting the ESP32 into the socket to determine when the buck converter LED switched off. This did not identify the fault and risked creating additional connection problems.
+
+A more systematic approach was then used. The wiring was checked with a multimeter in continuity mode, which revealed a short circuit between the 3.3 V rail and ground. The cause was a small stray strand of copper wire bridging two connections.
+
+Once the copper strand was removed, the short circuit was cleared and the circuit powered on successfully.
+
+![Initial working prototype](images/IMG_2797.jpeg)
+
+
+### 11.4 Final Perfboard Design
+
+![Prototype image 1](images/IMG_2810.jpeg)
+
+![Prototype image 2](images/IMG_2811.jpeg)
+
+![Prototype image 3](images/IMG_2816.jpeg)
+
+![Prototype image 4](images/IMG_2818.jpeg)
+

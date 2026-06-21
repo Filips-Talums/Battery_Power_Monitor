@@ -58,13 +58,13 @@ To verify the operation of the buck converter across different input voltages, a
 
 Testing showed that approximately 4.5 V was the minimum input voltage at which both the buck converter and ESP32 powered on successfully. The maximum available voltage from the variable power supply was 12 V, which was therefore the highest voltage tested. Additional testing using a 15 V supply source will be required to fully verify operation across the intended project voltage range.
 
-## Testing Results
+## Testing Results Bare 
 
 | Input Voltage - Vin (V) | Output Voltage - Vout (V) | Observation |
 |---|---|---|
 | 12.03 V | 5.01 V | Stable output voltage |
-| 9.13 V | 5.00 V | Stable output voltage |
+| 8.99 V | 5.00 V | Stable output voltage |
 | 7.64 V | 5.01 V | Stable output voltage |
 | 6.10 V | 4.98 V | Stable output voltage |
-| 5.13 V | 4.33 V | ESP32 powered on successfully; however, further testing is required with the INA226 power monitor and OLED display connected to determine the minimum stable operating voltage of the system. |
+| 5.13 V | 4.55 V | ESP32 powered on successfully; however, further testing is required with the INA226 power monitor and OLED display connected to determine the minimum stable operating voltage of the system. |
 
