@@ -82,19 +82,61 @@ Initial voltage calibration has been completed using a multimeter. The raw INA22
 
 Current calculation has been implemented using the INA226 shunt voltage and the R100 0.1 Ω shunt resistor. Initial current testing has been carried out using resistor loads and a multimeter. The monitor initially under-read current slightly, so a current correction factor was added in software. Further load testing with higher-current loads is still planned.
 
-### Completed
+## Current Status
 
-- Project requirements defined
-- Main components selected
-- System block diagram drafted
-- PlatformIO project created
-- INA226 sensor communication with ESP32 working
-- OLED display output working
-- Voltage calibration completed using a multimeter
-- Current calculation implemented using shunt voltage
-- Initial current testing completed using resistor loads
-- Breadboard prototype completed
-- Calibrated breadboard prototype software added to repository
+* Project requirements defined
+* Main components selected
+* System block diagram completed
+* PlatformIO project created
+* INA226 integrated with the ESP32
+* OLED display integrated and tested
+* Live voltage, current and power measurements displayed
+* Voltage readings calibrated against a multimeter
+* Current readings tested and calibrated using multiple resistive loads
+* Breadboard prototype completed and tested
+* Circuit transferred from breadboard to perfboard
+* LM2596 buck converter configured to provide a regulated 5 V supply
+* Schottky diode and polyfuse protection added
+* LED and buzzer fault indicators added
+* ESP32 mounted using removable female headers
+* Initial perfboard wiring faults identified and repaired
+* Perfboard prototype powered and operating successfully
+* Breadboard and perfboard software versions organised separately
+* Manufacturing process, testing and troubleshooting documented
+* Project images added to the documentation
+
+## Project Images
+
+### Top View — Arduino Load at 8.76 V
+
+![Top view of the power monitor testing an Arduino load at 8.76 V](docs/images/IMG_2818.jpeg)
+
+### Isometric View — Power Monitor and Arduino Load
+
+![Isometric view showing the power monitor and Arduino load](docs/images/IMG_2816.jpeg)
+
+### Side View of the Device
+
+![Side view of the completed power monitor prototype](docs/images/IMG_2811.jpeg)
+
+### Isometric View — Arduino Load at 11.68 V
+
+![Isometric view of the Arduino and power monitor displaying 11.68 V](docs/images/IMG_2810.jpeg)
+
+### Isometric View — Arduino Load at 8.78 V Input
+
+![Isometric view of the Arduino load and power monitor at an 8.78 V input](docs/images/IMG_2804.jpeg)
+
+
+## Next Steps
+
+* Complete extended testing with higher-current loads
+* Confirm the 2 A warning system under a controlled load
+* Design a custom PCB in KiCad
+* Add suitable connectors and component footprints
+* Design or manufacture an enclosure
+* Perform final accuracy, thermal and reliability testing
+
 
 ## Software
 
