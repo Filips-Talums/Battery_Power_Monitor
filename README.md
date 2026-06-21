@@ -142,6 +142,8 @@ Current calculation has been implemented using the INA226 shunt voltage and the 
 
 - [Breadboard Prototype V1](software/breadboard-prototype-v1/)
 
+- [Perfboard Prototype V2](software/perfboard-prototype-v2/)
+
 
 ## Project Documentation
 
