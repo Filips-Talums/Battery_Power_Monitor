@@ -3,4 +3,8 @@
 # KiCad local history
 .history/
 **/.history/
+**/*-backups/
+**/_restore_backup_*/
+**/_autosave-*
+**/~*.lck
 docs/videos/

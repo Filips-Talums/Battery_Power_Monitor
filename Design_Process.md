@@ -355,15 +355,15 @@ https://github.com/RobTillaart/INA226
 
 ### 8.2 Buck Converter Test & Calibration
 
-- [Results](testing/buck_converter_test.md/)
+- [Results](docs/testing/buck_converter_test.md)
 
 ### 8.3 INA226 Test & Calibration
 
-- [Results](testing/ina226_test.md/)
+- [Results](docs/testing/ina226_test.md)
 
 ### 8.5 OLED Display Test
 
-- [Results](testing/oled_display_test.md/)
+- [Results](docs/testing/oled_display_test.md)
 
 <img width="2505" height="4029" alt="Circuit_BB_PreBuzzerLED" src="https://github.com/user-attachments/assets/b93cb701-ea1b-4c2c-a39b-1a4367d8b34e" />
 
@@ -383,7 +383,7 @@ The buzzer and LED fault indicators were not included in the breadboard prototyp
 
 ### 10.5 Final Breadboard Design
 
-![Breadboard build](images/IMG_2635.jpeg)
+![Breadboard build](docs/images/IMG_2635.jpeg)
 
 ## 11. Perfboard Prototype
 
@@ -395,7 +395,7 @@ A perfboard kit containing several different board sizes was purchased for the p
 
 The kit contained five different sizes. Three were too small to accommodate the required header footprint, while another was unnecessarily large. A suitable intermediate size was selected and proved to be a good fit for the final arrangement.
 
-![Perfboard Kit](images/Perfboard_kit.png)
+![Perfboard Kit](docs/images/Perfboard_kit.png)
 
 The final design used two layers of perfboard mounted together with the nylon hex spacers supplied in the kit. This structure allowed the device to be easily disassembled and reassembled for troubleshooting, repairs and future modifications.
 
@@ -418,9 +418,9 @@ Once the buck converter had been mounted and connected, the first checkpoint tes
 
 The input and output voltages were then measured with a multimeter. The adjustment potentiometer was used to set the converter output to approximately 5 V before the ESP32 was connected.
 
-![Buck converter powered](images/IMG_2775.jpeg)
+![Buck converter powered](docs/images/IMG_2775.jpeg)
 
-![Buck converter output test](images/IMG_2776.jpeg)
+![Buck converter output test](docs/images/IMG_2776.jpeg)
 
 The INA226 module was then mounted on the opposite side of the same perfboard as the ESP32. Several connection methods were used depending on the available space. These included wrapping stripped jumper wire around header pins before soldering and bridging adjacent pads with solder where the pins were positioned close together.
 
@@ -444,16 +444,15 @@ A more systematic approach was then used. The wiring was checked with a multimet
 
 Once the copper strand was removed, the short circuit was cleared and the circuit powered on successfully.
 
-![Initial working prototype](images/IMG_2797.jpeg)
+![Initial working prototype](docs/images/IMG_2797.jpeg)
 
 
 ### 11.4 Final Perfboard Design
 
-![Prototype image 1](images/IMG_2810.jpeg)
+![Prototype image 1](docs/images/IMG_2810.jpeg)
 
-![Prototype image 2](images/IMG_2811.jpeg)
+![Prototype image 2](docs/images/IMG_2811.jpeg)
 
-![Prototype image 3](images/IMG_2816.jpeg)
+![Prototype image 3](docs/images/IMG_2816.jpeg)
 
-![Prototype image 4](images/IMG_2818.jpeg)
-
+![Prototype image 4](docs/images/IMG_2818.jpeg)

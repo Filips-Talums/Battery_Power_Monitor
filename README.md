@@ -82,8 +82,6 @@ Initial voltage calibration has been completed using a multimeter. The raw INA22
 
 Current calculation has been implemented using the INA226 shunt voltage and the R100 0.1 Ω shunt resistor. Initial current testing has been carried out using resistor loads and a multimeter. The monitor initially under-read current slightly, so a current correction factor was added in software. Further load testing with higher-current loads is still planned.
 
-## Current Status
-
 * Project requirements defined
 * Main components selected
 * System block diagram completed
@@ -151,4 +149,4 @@ Current calculation has been implemented using the INA226 shunt voltage and the 
 - [Hardware Files](hardware/)
 - [Software](software/)
 - [Examples](examples/)
-- [Learning Notes](learning/)
+- [Learning Notes](docs/learning/)

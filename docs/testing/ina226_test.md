@@ -2,8 +2,8 @@
 
 ## Wiring
 
-![Image 1](docs/images/IMG_2550.jpeg)
-![Image 2](docs/images/IMG_2546.jpeg)
+![Image 1](../images/IMG_2550.jpeg)
+![Image 2](../images/IMG_2546.jpeg)
 
 The INA226 module arrived with the header pins unsoldered; therefore, soldering was required before testing could begin. The pin headers were inserted perpendicular to the module and held in position while soldering was performed.
 
@@ -24,11 +24,11 @@ An I2C scanner script was uploaded to the ESP32 to verify communication between 
 IMG_2578 IMG_2579
 IMG_2581 IMG_2582
 
-![Image 3](docs/images/IMG_2578.jpeg)
-![Image 4](docs/images/IMG_2579.jpeg)
+![Image 3](../images/IMG_2578.jpeg)
+![Image 4](../images/IMG_2579.jpeg)
 
-![Image 5](docs/images/IMG_2581.jpeg)
-![Image 6](docs/images/IMG_2582.jpeg)
+![Image 5](../images/IMG_2581.jpeg)
+![Image 6](../images/IMG_2582.jpeg)
 
 
 For voltage multimeter in V dc prongs placed on the positive and negatvie terminals of the output screw terminal this data was compared to the INA226 readings in the serial monitor where then a correction factor can be calcultaed if needed.
