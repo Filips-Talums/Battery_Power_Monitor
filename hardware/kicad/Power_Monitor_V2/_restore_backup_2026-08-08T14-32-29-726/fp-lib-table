@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "mini360_module") (type "KiCad") (uri "${KIPRJMOD}/footprints/mini360_module.pretty") (options "") (descr ""))
+	(lib (name "MODULE_DM-OLED096-636") (type "KiCad") (uri "${KIPRJMOD}/footprints/MODULE_DM-OLED096-636.pretty") (options "") (descr ""))
+	(lib (name "Polyfuse_2A") (type "KiCad") (uri "${KIPRJMOD}/footprints/Polyfuse_2A.pretty") (options "") (descr ""))
+)

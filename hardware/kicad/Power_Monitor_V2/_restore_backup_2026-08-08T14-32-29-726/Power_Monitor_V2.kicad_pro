@@ -240,7 +240,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1"
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -488,7 +488,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Power Monitor.kicad_pro",
+    "filename": "Power_Monitor_V2.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -636,14 +636,6 @@
     "meta": {
       "version": 1
     },
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 4,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -651,18 +643,18 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "Power Monitor.kicad_sch",
-        "name": "Root",
-        "uuid": "92f1db88-7798-4f65-8c7e-f9aaa2a70cb8"
+        "filename": "Power_Monitor_V2.kicad_sch",
+        "name": "Power_Monitor_V2",
+        "uuid": "e9076cbd-a367-448d-9786-99c79ebfe0b5"
       }
     ],
-    "used_designators": "OLED1,BZ1,JOut1,JIn1,PS1,J1-2,R1,C1-4,D1-2,F1,U1-3",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
-      "92f1db88-7798-4f65-8c7e-f9aaa2a70cb8",
-      "Root"
+      "e9076cbd-a367-448d-9786-99c79ebfe0b5",
+      "Power_Monitor_V2"
     ]
   ],
   "text_variables": {},

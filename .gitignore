@@ -1,1 +1,6 @@
 .DS_Store
+
+# KiCad local history
+.history/
+**/.history/
+docs/videos/

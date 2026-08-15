@@ -1,0 +1,112 @@
+(footprint "MODULE_DM-OLED096-636_PINS"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -9.525 -13.97 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9522528f-03a1-4b83-ac92-152dd96aeed3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MODULE_DM-OLED096-636_PINS"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "539b8a47-1803-4020-a9b3-e752c7b85bd1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "45ec94ae-6a17-48ad-b778-ef29c40933ea")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7a2df2af-fc21-4d5c-89b2-564fc203dbd6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center -4 -2)
+		(end -3.9 -2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "18602d2f-ec54-42b0-b578-d749e1ceea3f")
+	)
+	(pad "1" thru_hole rect
+		(at -3.81 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "1ec36708-1b2d-4b6f-8fc0-49f7df306c21")
+	)
+	(pad "2" thru_hole circle
+		(at -1.27 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "1fb1c418-9efe-4748-af36-bbc8ec36732b")
+	)
+	(pad "3" thru_hole circle
+		(at 1.27 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "2dbb5f3f-4862-4f79-ad32-b7d391cf9ca2")
+	)
+	(pad "4" thru_hole circle
+		(at 3.81 0)
+		(size 1.508 1.508)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "8e4aa8b4-9764-41e2-8524-a1d0e9d76616")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d_models/DM-OLED096-636.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1.05 1 1.05)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
